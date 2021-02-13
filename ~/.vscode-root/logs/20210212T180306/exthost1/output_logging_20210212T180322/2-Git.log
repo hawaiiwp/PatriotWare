@@ -1,0 +1,149 @@
+Looking for git in: git
+Using git 2.28.0 from git
+> git rev-parse --git-dir
+Open repository: /home/kali/GMFL_Improved
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :individual_scripts/admin.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/admin.sh
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :individual_scripts/apt.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/apt.sh
+> git show --textconv :setup.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/setup.sh
+> git show --textconv :individual_scripts/apt.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/apt.sh
+> git show --textconv :individual_scripts/admin.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/admin.sh
+> git show --textconv :individual_scripts/apt.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/apt.sh
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :individual_scripts/cron.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/cron.sh
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :individual_scripts/deleteFiles.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/deleteFiles.sh
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :individual_scripts/EXTERMINATE.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/EXTERMINATE.sh
+> git show --textconv :individual_scripts/delUsers.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/delUsers.sh
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :individual_scripts/missingUsers.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/missingUsers.sh
+> git show --textconv :individual_scripts/packages.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/packages.sh
+> git show --textconv :individual_scripts/passReq.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/passReq.sh
+> git show --textconv :individual_scripts/passwords.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/passwords.sh
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :individual_scripts/services.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/services.sh
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :individual_scripts/packages.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/packages.sh
+> git show --textconv :individual_scripts/missingUsers.sh
+> git ls-files --stage -- /home/kali/GMFL_Improved/individual_scripts/missingUsers.sh
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse main
+> git rev-parse --symbolic-full-name main@{u}
+> git rev-list --left-right main...refs/remotes/origin/main
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
