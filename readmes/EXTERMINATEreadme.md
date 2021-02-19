@@ -1,5 +1,5 @@
-# EXTERMINATE
-To run EXTERMINATE go into the goodUsers.txt file and put the names of authorized users in in this format:
+# delUsers
+To run delUsers go into the data_files/goodUsers.txt file and put the names of authorized users in in this format:
 
 user1
 
