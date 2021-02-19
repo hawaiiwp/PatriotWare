@@ -4,7 +4,7 @@
 ## giving executable permissions to the scripts
 #
 
-chmod +x individual_scripts/EXTERMINATE.sh
+chmod +x individual_scripts/delUsers.sh
 chmod +x individual_scripts/deleteFiles.sh
 chmod +x individual_scripts/passReq.sh
 chmod +x individual_scripts/admin.sh
