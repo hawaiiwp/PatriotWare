@@ -1,4 +1,4 @@
-# passwords.sh
+# individual_scripts/passwords.sh
 
 passwords.sh should be ran like this: ./passwords.sh PutYourPasswordHere
 
