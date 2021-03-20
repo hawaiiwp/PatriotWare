@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/servicesreadme.md
+    exit 1
+fi
+
 echo '!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!'
 echo '           pay attention!!!'
 echo '        Did you come back after'

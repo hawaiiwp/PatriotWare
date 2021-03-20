@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/adminreadme.md
+    exit 1
+fi
+
 #We actually about to do the admins!
 
 #

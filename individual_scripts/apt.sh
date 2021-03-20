@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/aptreadme.md
+    exit 1
+fi
+
 # Updating
 apt-get update -y
 echo

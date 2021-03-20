@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/missingUsersreadme.md
+    exit 1
+fi
+
 echo 'Would you like to check for missing users (keep in mind that you should either run the root.sh script or manually check for uid 0 users first.)?'
 
 read -p 'y/n: ' RESP

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/passwordsreadme.md
+    exit 1
+fi
+
 echo "It is recomended that you run the EXTERMINATE script before this, with this in mind, would you like to continue? (y/n)"
 
     read -p 'y/n: ' RESP

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/cronreadme.md
+    exit 1
+fi
+
 echo "Are you ready to view the cron jobs? (y/n)"
 
 read -p 'y/n: ' RESP

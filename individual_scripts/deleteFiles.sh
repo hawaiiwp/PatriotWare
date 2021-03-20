@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/deleteFilesreadme.md
+    exit 1
+fi
+
 echo '*____________________________________*'
 echo '|                                    |'
 echo '|                                    |'

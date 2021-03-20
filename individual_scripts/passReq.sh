@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/passReqreadme.md
+    exit 1
+fi
+
 #Let's set some password requirements!
 
 #Polishing our CLI.

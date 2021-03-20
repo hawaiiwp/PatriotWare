@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/packagesreadme.md
+    exit 1
+fi
+
 #
 ## This is a script that will go through a blacklist of packages, check if any are present, and then delete those that are on the machine.
 #

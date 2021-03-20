@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == -h ]
+then
+    ./functions/helpFunc.sh readmes/delUsersreadme.md
+    exit 1
+fi
+
 #Checking if the user is coming back after editing the data_files/badUsers.txt file
 echo '*_____________________________________*'
 echo '     have you come back after          ' 
