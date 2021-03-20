@@ -14,6 +14,8 @@ chmod +x individual_scripts/passwords.sh
 chmod +x individual_scripts/apt.sh
 chmod +x individual_scripts/missingUsers.sh
 chmod +x individual_scripts/cron.sh
+chmod +x functions/helpFunc.sh
+
 #
 ## making the necessary files and directories to pass around information, read information from, and write information to.
 #
