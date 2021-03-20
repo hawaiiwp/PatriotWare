@@ -10,4 +10,4 @@ An improved tool for the CyberPatriot competition.
 
 # How to Use:
 
-You should read the readme.md file for each script before using it. Many of the scripts have files that require your user input. You can print out the readme of each file by running the script with -h
+You should read the readme.md file for each script before using it. Many of the scripts have files that require your user input. You can print out the readme of each file by running the script with -h. Make sure to only run scripts from the GMFL_Improved directory.

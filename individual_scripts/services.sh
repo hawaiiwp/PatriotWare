@@ -38,13 +38,7 @@ services=`awk -F] '{print $2}' data_files/services.txt`
 echo "${servicesWhitelist//[[:blank:]]/}" > data_files/servicesWhitelist.txt
 echo "${services//[[:blank:]]/}" > data_files/services.txt
 
-sort data_files/services.txt > data_files/services2.txt
-cat data_files/services2.txt > data_files/services.txt
-
-sort data_files/servicesWhitelist.txt > data_files/servicesWhitelist2.txt
-cat data_files/servicesWhitelist2.txt > data_files/servicesWhitelist.txt
-
-comm -2 -3 data_files/services.txt data_files/servicesWhitelist.txt > data_files/badServices.txt
+./functions/diffFunc.sh data_files/services.txt data_files/servicesWhitelist.txt data_files/services2.txt data_files/servicesWhitelist2.txt data_files/badServices.txt
 
 echo '!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!'
 echo '           pay attention!!!'

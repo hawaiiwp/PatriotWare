@@ -22,27 +22,7 @@ echo "It is recomended that you run the EXTERMINATE script before this, with thi
 
 # Updating the users.txt file
 
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
-
-for i in {1000..2000}
-do 
-    if [ ${i} == 1000 ]
-    then
-        grep -n $i /etc/passwd > data_files/users.txt
-    else
-        grep -n $i /etc/passwd >> data_files/users.txt
-    fi
-done
-
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
-
-awk -F: '{ print $2}' data_files/users.txt > data_files/users2.txt
-cat data_files/users2.txt > data_files/users.txt
-
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
+./functions/getUsersFunc.sh data_files/users.txt data_files/users2.txt
 
 IFS=$'\n' read -d '' -r -a users < data_files/users.txt
 

@@ -19,59 +19,10 @@ else
         exit 1
 fi
 
-#Getting rid of empty lines
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
-
-#Looping through 50 possible uids for users. This will work most of the time. Take care when looking at the badUsers file.
-for i in {1000..2000}
-do 
-    grep -n $i /etc/passwd >> data_files/users.txt
-done
-
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
-
-awk -F: '{ print $2}' data_files/users.txt > data_files/users2.txt
-cat data_files/users2.txt > data_files/users.txt
-
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
-
-#Comparing data_files/users.txt to data_files/goodUsers.txt
-sort data_files/users.txt > data_files/users2.txt
-sort data_files/goodUsers.txt > data_files/goodUsers2.txt
-cat data_files/users2.txt > data_files/users.txt
-cat data_files/goodUsers2.txt > data_files/goodUsers.txt
-comm -2 -3 data_files/users.txt data_files/goodUsers.txt > data_files/badUsers.txt
-
-#getting rid of empty lines
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
-
-#Looping through 50 possible uids for users. This will work most of the time. Take care when looking at the badUsers file.
-for i in {1000..1050}
-do 
-    grep -n $i /etc/passwd >> data_files/users.txt
-done
-
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
-
-awk -F: '{ print $2}' data_files/users.txt > data_files/users2.txt
-cat data_files/users2.txt > data_files/users.txt
-
-sed -i '/^$/d' data_files/users.txt
-sed -i '/^$/d' data_files/users2.txt
+./functions/getUsersFunc.sh data_files/users.txt data_files/users2.txt
 
 #Comparing data_files/users.txt to data_files/goodUsers.txt and sorting both files (sorting the files is required to use comm)
-sort data_files/users.txt > data_files/users2.txt
-sort data_files/goodUsers.txt > data_files/goodUsers2.txt
-
-cat data_files/users2.txt > data_files/users.txt
-cat data_files/goodUsers2.txt > data_files/goodUsers.txt
-
-comm -1 -3 --nocheck-order data_files/users.txt data_files/goodUsers.txt > data_files/missingUsers.txt
+./functions/diffFunc.sh data_files/goodUsers.txt data_files/users.txt data_files/goodUsers2.txt data_files/users2.txt data_files/missingUsers.txt
 echo 
 
 #Making a badUsers array out of data_files/badUsers.txt
