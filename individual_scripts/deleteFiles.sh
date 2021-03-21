@@ -62,48 +62,30 @@ fi
 
 echo 
 
-echo 'Would you like to delete mp3 files? (y/n)'
-read -p 'y/n: ' RESP
-if [ $RESP == 'y' ]
-then
-	echo
-	echo 'Searching for files'
-        find / -iname '*.mp3' > data_files/foundFiles.txt
-        echo 'Found files'
-else
-	echo 'Moving on'
-fi
+./functions/findFilesFunc.sh .mp3 data_files/foundFiles.txt first
 
 echo 
 
-echo 'Would you like to delete mp4 files? (y/n)'
-read -p 'y/n: ' RESP
-if [ $RESP == 'y' ]
-then
-	echo
-	echo 'Searching for files'
-    find / -iname '*.mp4' >> data_files/foundFiles.txt
-    echo 'Found files'
-else
-	echo 'Moving on'
-fi
+./functions/findFilesFunc.sh .mp4 data_files/foundFiles.txt after
+
+echo
+
+./functions/findFilesFunc.sh .pdf data_files/foundFiles.txt after
 
 echo 
 
-echo 'Would you like to delete common files such as passwords.txt, brutus, etc? (y/n)'
-read -p 'y/n: ' RESP
-if [ $RESP == 'y' ]
-then
-	echo
-	echo 'Searching for files'
-    find / -iname 'passwords.txt' >> data_files/foundFiles.txt
-    find / -iname 'password.txt' >> data_files/foundFiles.txt
-    echo 'Found files'
-else
-	echo 'Moving on'
-fi
+./functions/findFilesFunc.sh password.txt data_files/foundFiles.txt after
+./functions/findFilesFunc.sh passwords.txt data_files/foundFiles.txt after
 
 echo 
+
+args=($@)
+
+for i in ${args[@]}
+do
+	./functions/findFilesFunc.sh $i data_files/foundFiles.txt after
+	echo
+done
 
 cat data_files/foundFiles.txt
 
