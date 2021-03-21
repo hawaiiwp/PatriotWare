@@ -17,6 +17,7 @@ chmod +x individual_scripts/cron.sh
 chmod +x functions/helpFunc.sh
 chmod +x functions/getUsersFunc.sh
 chmod +x functions/diffFunc.sh
+chmod +x functions/findFilesFunc.sh
 
 #
 ## making the necessary files and directories to pass around information, read information from, and write information to.
