@@ -94,5 +94,23 @@ then
     done
 else
     echo "DIY then ):"
+fi
+
+echo "Would you like to only allow root cron? (y/n)"
+
+read -p 'y/n: ' RESP
+if [ $RESP == 'y' ]
+then
+    echo 'Okay'
+elif [ $RESP =='n' ]
+then
+    echo 'Bye'
     exit 1
 fi
+
+crontab -r
+rm -f cron.deny at.deny
+echo root > cron.allow
+echo root > at.allow
+chown root:root cron.allow at.allow
+chmod 644 cron.allow at.allow

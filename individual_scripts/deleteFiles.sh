@@ -61,22 +61,38 @@ else
 fi
 
 echo 
-
 ./functions/findFilesFunc.sh .mp3 data_files/foundFiles.txt first
-
 echo 
-
 ./functions/findFilesFunc.sh .mp4 data_files/foundFiles.txt after
-
 echo
-
 ./functions/findFilesFunc.sh .pdf data_files/foundFiles.txt after
-
+echo
+./functions/findFilesFunc.sh .mov data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .avi data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .mpg data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .mpeg data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .flac data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .m4a data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .flv data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .ogg data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .gif data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .png data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .jpg data_files/foundFiles.txt after
+echo
+./functions/findFilesFunc.sh .jpeg data_files/foundFiles.txt after
 echo 
-
 ./functions/findFilesFunc.sh password.txt data_files/foundFiles.txt after
 ./functions/findFilesFunc.sh passwords.txt data_files/foundFiles.txt after
-
 echo 
 
 args=($@)
