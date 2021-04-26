@@ -53,13 +53,7 @@ mkdir rawCronJobs
 apt-get install net-tools -y > /dev/null
 
 #
-## making a fancy littl ascii art
+## saying thank you (I'm not a monster)
 #
 
-echo "
-______     _        _       _   _    _                
-| ___ \   | |      (_)     | | | |  | |               
-| |_/ /_ _| |_ _ __ _  ___ | |_| |  | | __ _ _ __ ___ 
-|  __/ _` | __| '__| |/ _ \| __| |/\| |/ _` | '__/ _ \
-| | | (_| | |_| |  | | (_) | |_\  /\  / (_| | | |  __/
-\_|  \__,_|\__|_|  |_|\___/ \__|\/  \/ \__,_|_|  \___|"
+echo "Thank you for using PatriotWare"
