@@ -1,6 +1,6 @@
 # PatriotWare
 
-An improved tool for the CyberPatriot competition.
+A collection of scripts made for the CyberPatriot competition.
 
 # Before You Begin:
 
