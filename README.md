@@ -1,4 +1,4 @@
-# GMFL_Improved
+# PatriotWare
 
 An improved tool for the CyberPatriot competition.
 
