@@ -3,6 +3,12 @@ if ($args[0] -eq "-h") {
     Exit 1
 }
 
+Disable-LocalUser -Name "Guest"
+
+.\functions\whiteSpace.ps1 "data_files\goodUsers.txt"
+.\functions\whiteSpace.ps1 "data_files\badUsers.txt"
+.\functions\whiteSpace.ps1 "data_files\users.txt"
+
 function cut {
     param(
       [Parameter(ValueFromPipeline=$True)] [string]$inputobject,
@@ -22,7 +28,7 @@ Switch($Selection) {
     'y' {
         "Oh, fun!"
 
-        wmic useraccount get Name,Disabled | Select-String "FALSE.*" | cut -f 1 -d "     " > data_files\users.txt
+        .\functions\getUsers.ps1 "data_files\users.txt"
 
         $users = Get-Content data_files\users.txt
         $goodUsers = Get-Content data_files\goodUsers.txt
@@ -43,7 +49,9 @@ Switch($Selection) {
 
 #The above function was stolen from stack overflow. What are you gonna do, cry?
 
-wmic useraccount get Name,Disabled | Select-String "FALSE.*" | cut -f 1 -d "     " > data_files\users.txt
+Write-Output "" > data_files\badUsers.txt
+
+.\functions\getUsers.ps1 "data_files\users.txt"
 
 $users = Get-Content data_files\users.txt
 $goodUsers = Get-Content data_files\goodUsers.txt

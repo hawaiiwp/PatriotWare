@@ -1,0 +1,1 @@
+wmic useraccount get Name,Disabled | Select-String "FALSE.*" | cut -f 1 -d "     " > $args[0]
