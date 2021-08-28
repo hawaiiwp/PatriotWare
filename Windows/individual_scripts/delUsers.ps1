@@ -76,5 +76,6 @@ if ($badUsers.Length -eq 0) {
 .\functions\yn.ps1 "Would you like to delete the following users?`n${badUsers}`n(y/n)" "Cool" "Cool, exiting. Make sure to edit the data_files\badUsers.txt file and come back!" "-d" "-e"
 
 foreach ($badUser in $badUsers) {
+    Remove-LocalUser -Name ${badUser}
     Write-Output "The user ${badUser} was deleted. (Along with your mom lmao XDDDDDDDDDDDD)"
 }
