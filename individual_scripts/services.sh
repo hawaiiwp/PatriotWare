@@ -32,10 +32,9 @@ fi
 
 service --status-all > data_files/services.txt
 
-servicesWhitelist=`awk -F] '{print $2}' data_files/servicesWhitelist.txt`
+IFS=$'\n' read -d '' -r -a servicesWhitelist < data_files/servicesWhitelist.txt
 services=`awk -F] '{print $2}' data_files/services.txt`
 
-echo "${servicesWhitelist//[[:blank:]]/}" > data_files/servicesWhitelist.txt
 echo "${services//[[:blank:]]/}" > data_files/services.txt
 
 ./functions/diffFunc.sh data_files/services.txt data_files/servicesWhitelist.txt data_files/services2.txt data_files/servicesWhitelist2.txt data_files/badServices.txt
@@ -43,7 +42,7 @@ echo "${services//[[:blank:]]/}" > data_files/services.txt
 echo '!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!'
 echo '           pay attention!!!'
 cat data_files/badServices.txt
-echo '   Do you want to delete these services?'
+echo '   Do you want to disable these services?'
 echo '                (y/n)'
 echo '!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!'
 
