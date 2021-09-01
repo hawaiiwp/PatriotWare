@@ -21,8 +21,8 @@ Linux/data_files/users.txt
 Linux/data_files/users2.txt
 Linux/dev_scripts/readme.md
 Linux/dev_scripts/tempUsers.sh
-Windows\data_files\badUsers.txt
-Windows\data_files\goodUsers.txt
-Windows\data_files\users.txt
-Windows\dev_scripts\readme.md
-Windows\dev_scripts\tempUsers.ps1
+Windows/data_files/badUsers.txt
+Windows/data_files/goodUsers.txt
+Windows/data_files/users.txt
+Windows/dev_scripts/readme.md
+Windows/dev_scripts/tempUsers.ps1
