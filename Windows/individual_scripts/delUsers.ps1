@@ -9,19 +9,6 @@ Disable-LocalUser -Name "Guest"
 .\functions\whiteSpace.ps1 "data_files\badUsers.txt"
 .\functions\whiteSpace.ps1 "data_files\users.txt"
 
-function cut {
-    param(
-      [Parameter(ValueFromPipeline=$True)] [string]$inputobject,
-      [string]$delimiter='\s+',
-      [string[]]$field
-    )
-  
-    process {
-      if ($null -eq $field) { $inputobject -split $delimiter } else {
-        ($inputobject -split $delimiter)[$field] }
-    }
-}
-
 $String = "Have you come after editing the data_files\badUsers.txt file? (y/n)"
 $Selection = Read-Host $String
 Switch($Selection) {
@@ -38,6 +25,7 @@ Switch($Selection) {
 
         foreach ($badUser in $badUsers) {
             Write-Output "The user ${badUser} was deleted. (Along with your mom lmao XDDDDDDDDDDDD)"
+            Remove-LocalUser -name $badUser
         }
         
         Exit 1
@@ -76,5 +64,6 @@ if ($badUsers.Length -eq 0) {
 .\functions\yn.ps1 "Would you like to delete the following users?`n${badUsers}`n(y/n)" "Cool" "Cool, exiting. Make sure to edit the data_files\badUsers.txt file and come back!" "-d" "-e"
 
 foreach ($badUser in $badUsers) {
+    Remove-LocalUser -name $badUser
     Write-Output "The user ${badUser} was deleted. (Along with your mom lmao XDDDDDDDDDDDD)"
 }
