@@ -19,6 +19,6 @@ Linux/data_files/uid.txt
 Linux/data_files/uid2.txt
 Linux/data_files/users.txt
 Linux/data_files/users2.txt
-Windows\data_files\badUsers.txt
-Windows\data_files\goodUsers.txt
-Windows\data_files\users.txt
+Windows/data_files/badUsers.txt
+Windows/data_files/goodUsers.txt
+Windows/data_files/users.txt
