@@ -89,6 +89,7 @@ freeradius-wpe
 funkload
 funkloader
 galleta
+gameconqueror
 ghost-phisher
 ghostphisher
 giskismet
@@ -138,6 +139,7 @@ linux-exploit-suggester
 lynis
 makeivs-ng
 maltego-teeth
+manaplus
 maskprocessor
 masscan
 mdk3
