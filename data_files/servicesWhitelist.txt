@@ -18,6 +18,7 @@ cups
 cups-browsed
 dbus
 dns-clean
+gdm3
 grub-common
 hddtemp
 hostname.sh
@@ -40,6 +41,7 @@ networking
 network-manager
 ondemand
 openbsd-inetd
+open-vm-tools
 plymouth
 plymouth-log
 pppd-dns
