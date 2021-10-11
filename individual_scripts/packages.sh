@@ -48,6 +48,22 @@ do
     then
         echo "Removed package ${i}!"
     else
-        echo "[URGENT MESSAGE]: Something went wrong while trying to remove the package ${i}."
+        echo "[URGENT MESSAGE]: Something went wrong while trying to apt-get remove the package ${i}."
+    fi
+    
+    apt-get remove --purge ${i} -y &> /dev/null
+    if [ $? == 0 ]
+    then
+        echo "Removed package ${i}!"
+    else
+        echo "[URGENT MESSAGE]: Something went wrong while trying to apt-get remove --purge the package ${i}."
+    fi
+    
+    apt-get autoremove ${i} -y &> /dev/null
+    if [ $? == 0 ]
+    then
+        echo "Removed package ${i}!"
+    else
+        echo "[URGENT MESSAGE]: Something went wrong while trying to apt-get autoremove the package ${i}."
     fi
 done
