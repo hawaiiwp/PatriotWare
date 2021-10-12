@@ -14,6 +14,7 @@ chmod +x individual_scripts/passwords.sh
 chmod +x individual_scripts/apt.sh
 chmod +x individual_scripts/missingUsers.sh
 chmod +x individual_scripts/cron.sh
+chmod +x individual_scripts/ufw.sh
 chmod +x functions/helpFunc.sh
 chmod +x functions/getUsersFunc.sh
 chmod +x functions/diffFunc.sh
