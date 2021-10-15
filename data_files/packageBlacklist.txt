@@ -82,7 +82,9 @@ fiked
 fimap
 findmyhash
 firewalk
+five-or-more
 foremost
+four-in-a-row
 fragroute
 fragrouter
 freeradius-wpe
@@ -93,6 +95,13 @@ gameconqueror
 ghost-phisher
 ghostphisher
 giskismet
+gnome-chess
+gnome-klotski
+gnome-mahjongg
+gnome-mines
+gnome-robots
+gnome-taquin
+gnome-tetravex
 gobuster
 golismero
 goofile
@@ -106,11 +115,13 @@ hashcat
 hash-identifier
 hexinject
 hexorbase
+hitori
 hostadp-wpe
-hydra
 hping3
 httptunnel
 hurl
+hydra
+iagno
 iaxflood
 ident-user-enum
 inspy
@@ -135,6 +146,7 @@ keimpx
 killerbee
 kismet
 lbd
+lightsoff
 linux-exploit-suggester
 lynis
 makeivs-ng
@@ -186,6 +198,7 @@ protos-sip
 proxystrike
 pwnat
 pyrit
+quadrapassel
 rainbow-crack
 rcracki-mt
 reaver
@@ -233,7 +246,9 @@ sslstrip
 sslyze
 statsprocessor
 sublist3r
+swell-foop
 t50
+tali
 temineter
 thc-hydra
 thc-ipv6
@@ -244,6 +259,10 @@ tkiptun-ng
 tlssled
 tnscmd10g
 toolkit
+transmission-cli
+transmission-common
+transmission-daemon
+transmission-gtk
 truecrach
 twofi
 u3-pwn
@@ -252,6 +271,7 @@ unicornscan
 uniscan
 unix-privesc-check
 valgrind
+vinagre
 voiphopper
 volatility
 w3af
