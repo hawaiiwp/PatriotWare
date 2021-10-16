@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 == "-h" ] 2> /dev/null
+then
+    ./functions/helpFunc.sh readmes/sysctlreadme.md
+    exit 1
+fi
+
 #systemctl is what we are doing.
 
 echo "Would you like to do systemctl things?"
