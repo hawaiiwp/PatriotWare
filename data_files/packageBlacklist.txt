@@ -1,5 +1,6 @@
 ace
 aircrack-ng
+aisleriot
 amap
 android-sdk
 apache-users
@@ -100,6 +101,7 @@ gnome-klotski
 gnome-mahjongg
 gnome-mines
 gnome-robots
+gnome-sudoku
 gnome-taquin
 gnome-tetravex
 gobuster
