@@ -43,7 +43,7 @@ done
 
 for i in ${badPackages[@]}
 do
-    apt-get remove ${i} -y &> /dev/null
+    apt-get remove ${i}* -y &> /dev/null
     if [ $? == 0 ]
     then
         echo "Removed package ${i}!"
@@ -51,7 +51,7 @@ do
         echo "[URGENT MESSAGE]: Something went wrong while trying to apt-get remove the package ${i}."
     fi
     
-    apt-get purge ${i} -y &> /dev/null
+    apt-get purge ${i}* -y &> /dev/null
     if [ $? == 0 ]
     then
         echo "Purged package ${i}!"
@@ -59,7 +59,7 @@ do
         echo "[URGENT MESSAGE]: Something went wrong while trying to apt-get remove --purge the package ${i}."
     fi
     
-    apt-get autoremove ${i} -y &> /dev/null
+    apt-get autoremove ${i}* -y &> /dev/null
     if [ $? == 0 ]
     then
         echo "Autoremoved package ${i}!"
