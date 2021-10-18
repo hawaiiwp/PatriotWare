@@ -12,6 +12,18 @@ Acquire::IndexTargets {
         KeepCompressedAs "gz";
     };
 
+    # Small icons for GUI components described in the DEP-11
+    # YAML metadata.
+    deb::DEP-11-icons-small  {
+        MetaKey "$(COMPONENT)/dep11/icons-48x48.tar";
+        ShortDescription "icons-48x48";
+        Description "$(RELEASE)/$(COMPONENT) DEP-11 48x48 Icons";
+
+        KeepCompressed "true";
+        KeepCompressedAs "gz";
+        DefaultEnabled "false";
+    };
+
     # Normal-sized icons for GUI components described in the DEP-11
     # YAML metadata.
     deb::DEP-11-icons  {
@@ -21,14 +33,37 @@ Acquire::IndexTargets {
 
         KeepCompressed "true";
         KeepCompressedAs "gz";
+        DefaultEnabled "false";
     };
 
     # Icons suitable for HiDPI displays, for GUI components described in
     # the DEP-11 YAML metadata.
     deb::DEP-11-icons-hidpi  {
+        MetaKey "$(COMPONENT)/dep11/icons-64x64@2.tar";
+        ShortDescription "icons-64x64@2";
+        Description "$(RELEASE)/$(COMPONENT) DEP-11 64x64@2 Icons";
+
+        KeepCompressed "true";
+        KeepCompressedAs "gz";
+        DefaultEnabled "false";
+    };
+
+    # Larger icons that are often used on HiDPI displays as fallback.
+    deb::DEP-11-icons-large  {
         MetaKey "$(COMPONENT)/dep11/icons-128x128.tar";
         ShortDescription "icons-128x128";
         Description "$(RELEASE)/$(COMPONENT) DEP-11 128x128 Icons";
+
+        KeepCompressed "true";
+        KeepCompressedAs "gz";
+        DefaultEnabled "false";
+    };
+
+    # Even larger icons that are used on HiDPI displays.
+    deb::DEP-11-icons-large-hidpi {
+        MetaKey "$(COMPONENT)/dep11/icons-128x128@2.tar";
+        ShortDescription "icons-128x128@2";
+        Description "$(RELEASE)/$(COMPONENT) DEP-11 128x128@2 Icons";
 
         KeepCompressed "true";
         KeepCompressedAs "gz";
@@ -38,5 +73,5 @@ Acquire::IndexTargets {
 
 # Refresh AppStream cache when APT's cache is updated (i.e. apt update)
 APT::Update::Post-Invoke-Success {
-    "if /usr/bin/test -w /var/cache/app-info -a -e /usr/bin/appstreamcli; then appstreamcli refresh > /dev/null; fi";
+    "if /usr/bin/test -w /var/cache/app-info -a -e /usr/bin/appstreamcli; then appstreamcli refresh-cache > /dev/null; fi";
 };
