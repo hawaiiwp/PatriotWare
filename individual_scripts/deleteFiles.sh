@@ -97,7 +97,7 @@ if [ $RESP == 'y' ]
 then
     echo
     echo 'Searching for files'
-    find /home -iname *.txt
+    find /home -iname "*.txt" | grep -v PatriotWare | grep -v .mozilla | grep -v .cache >> data_files/foundFiles.txt
     echo 'Found files'
 else
     echo 'Moving on'
