@@ -61,38 +61,47 @@ else
 fi
 
 echo 
-./functions/findFilesFunc.sh .mp3 data_files/foundFiles.txt first
+./functions/findFilesFunc.sh .mp3 > data_files/foundFiles.txt 
 echo 
-./functions/findFilesFunc.sh .mp4 data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .mp4 >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .pdf data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .pdf >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .mov data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .mov >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .avi data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .avi >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .mpg data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .mpg >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .mpeg data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .mpeg >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .flac data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .flac >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .m4a data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .m4a >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .flv data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .flv >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .ogg data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .ogg >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .gif data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .gif >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .png data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .png >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .jpg data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .jpg >> data_files/foundFiles.txt
 echo
-./functions/findFilesFunc.sh .jpeg data_files/foundFiles.txt after
+./functions/findFilesFunc.sh .jpeg >> data_files/foundFiles.txt
 echo 
-./functions/findFilesFunc.sh password.txt data_files/foundFiles.txt after
-./functions/findFilesFunc.sh passwords.txt data_files/foundFiles.txt after
+echo "Would you like to delete sketchy .txt files? (y/n)"
+read -p 'y/n: ' RESP
+if [ $RESP == 'y' ]
+then
+    echo
+    echo 'Searching for files'
+    find /home -iname *.txt
+    echo 'Found files'
+else
+    echo 'Moving on'
+fi
 echo 
 
 args=($@)
