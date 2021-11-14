@@ -65,7 +65,7 @@ echo
 echo 
 ./functions/findFilesFunc.sh .mp4 >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .pdf >> data_files/foundFiles.txt 
+./functions/findFilesFunc.sh .pdf | grep -v /snap | grep -v /usr >> data_files/foundFiles.txt 
 echo
 ./functions/findFilesFunc.sh .mov >> data_files/foundFiles.txt 
 echo
@@ -81,13 +81,13 @@ echo
 echo
 ./functions/findFilesFunc.sh .flv >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .ogg >> data_files/foundFiles.txt 
+./functions/findFilesFunc.sh .ogg | grep -v /snap | grep -v /usr >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .gif >> data_files/foundFiles.txt 
+./functions/findFilesFunc.sh .gif | grep -v /usr >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .png >> data_files/foundFiles.txt 
+./functions/findFilesFunc.sh .png | grep -v /var | grep -v /usr | grep -v /snap >> data_files/foundFiles.txt 
 echo
-./functions/findFilesFunc.sh .jpg >> data_files/foundFiles.txt
+./functions/findFilesFunc.sh .jpg | grep -v /usr | grep -v /snap >> data_files/foundFiles.txt
 echo
 ./functions/findFilesFunc.sh .jpeg >> data_files/foundFiles.txt
 echo 
